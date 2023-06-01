@@ -1,0 +1,13 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <i class="fa-light fa-film"></i>
+    <%= link_to 'Create a new list', new_list_path, class: "nav-item btn btn-primary"%>
+  </div>
+</div>
+
+<h2 >My lists of movies</h2>
+
+<% @lists.each do |list|  %>
+  <p><%= list.name %></p>
+  <%= link_to 'View the list', list_path(list),  %>
+<% end %>
